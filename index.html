@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="date"></div>
+        <div class="title">USER MANAGEMENT</div>
+      </header>
+      <main>
+        <section class="panal" id="get-section">
+          <h2>GET USER</h2>
+          <form action="get">
+            <label for="get-id">ID:</label>
+            <select id="get-id">
+              <option value="all">All</option>
+              <!-- Add dynamic options later -->
+            </select>
+          </form>
+
+          <button onclick="getUser()">Submit</button>
+        </section>
+        <section class="panal" id="post-section">
+          <h2>POST USER</h2>
+          <form action="get">
+            <label for="name">NAME: </label>
+            <input type="text" id="post-name" placeholder="Name" />
+            <label for="Phone">PHONE: </label>
+            <input type="text" id="post-phone" placeholder="Phone" />
+          </form>
+
+          <button onclick="postUser()">Submit</button>
+        </section>
+        <section class="panal" id="put-del-section">
+          <h2>DELETE USER</h2>
+          <form action="get">
+            <label for="action-id">ID:</label>
+            <select id="action-id"></select>
+          </form>
+
+          <button onclick="deleteUser()">Submit</button>
+        </section>
+      </main>
+
+      <section class="display-section">
+        <div class="user-cards"></div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

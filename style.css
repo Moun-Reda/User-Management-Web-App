@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #ff00cc;
+  font-family: "Orbitron", sans-serif;
+  padding-top: 80px;
+}
+
+/*Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  border-bottom: 2px solid #ff00cc;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 0 15px #ff00cc;
+}
+
+header .date {
+  font-size: 1rem;
+  color: #ff99dd;
+}
+
+header .title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ff00cc;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
+
+/* Main */
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.panal {
+  background-color: #111;
+  border: 2px solid #ff00cc;
+  box-shadow: 0 0 15px #ff00cc;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.panal:hover {
+  transform: scale(1.02);
+}
+
+.panal h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #ff66cc;
+  text-align: center;
+  border-bottom: 1px solid #ff00cc;
+  padding-bottom: 5px;
+}
+
+/* Form Elements */
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  background-color: #000;
+  color: #ff00cc;
+  border: 1px solid #ff00cc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff00cc;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff33cc;
+  transform: scale(1.05);
+}
+
+/* Display Section */
+.display-section {
+  padding: 20px;
+  margin-top: 20px;
+  border-top: 2px solid #ff00cc;
+}
+
+/* User Cards */
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  border: 2px solid #ff00cc;
+  padding: 10px;
+}
+
+.card {
+  background-color: #111;
+  border: 2px solid #ff00cc;
+  box-shadow: 0 0 20px #ff00cc;
+  padding: 15px;
+  width: 250px;
+  border-radius: 10px;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.card h3 {
+  color: #ff99dd;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #ffccf2;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
